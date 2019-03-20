@@ -46,6 +46,29 @@ namespace ConsoleApp1
             // TO DO: implement the algorithm to calculate the Students' average GPA
             return 0;
         }
+        public void Announcement()
+        {
+            try
+            {
+
+                using (StreamReader sr = new StreamReader("U:/Users/727454/cSharp/names.txt"))
+                {
+                    string line;
+
+
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine("The file could not be read:");
+                Console.WriteLine(e.Message);
+            }
+        }
     }
 
     public interface IDataStructure
@@ -57,6 +80,8 @@ namespace ConsoleApp1
     {
         // the QUEUE holds the classes (that is classroom of students!)
         // TO DO: insert the contents of the Data File: Classroom Data Set 
+
+
 
         public Queue q1 = new Queue();
 
